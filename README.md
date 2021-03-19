@@ -142,7 +142,7 @@ BCRYPT_COST = 12
 <a id="endpoints"></a>
 ## Endpoints
 
->> signup
+### signup
    * Request:
       ```bash
       curl -i -X POST http://localhost:3003/users/signup -H "Content-Type: application/json" -d '{"name":"Alice","email":"alice@gmail.com","password":"pass123"}'
@@ -160,7 +160,7 @@ BCRYPT_COST = 12
 
       {"message":"Success!", "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg5OGJjNDVlLTExZjEtNGEyMy04OTZhLTdmMmUyOWNmZTAxMiIsImlhdCI6MTYwNTYyMzU5NSwiZXhwIjoxNjA1NzA5OTk1fQ.pWxV2vtLnp0hKm0CXXnLpnDu6PEPkZM27A71oTTCYfE"}%   
       ```
->> login
+### login
    * Request:
       ```bash
       curl -i -X POST http://localhost:3003/users/login -H "Content-Type: application/json" -d '{"email":"alice@gmail.com","password":"pass123"}'
@@ -178,7 +178,7 @@ BCRYPT_COST = 12
 
       {"message":"Success!","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg5OGJjNDVlLTExZjEtNGEyMy04OTZhLTdmMmUyOWNmZTAxMiIsImlhdCI6MTYwNTYyMzk2MywiZXhwIjoxNjA1NzEwMzYzfQ.9JvXRQpazI5k6GAnc1lFcVcTbZ_ElASnwyybU_tRU48"}%   
       ```
->> createPost
+### createPost
    * Request:
       ```bash
       curl -i -X POST http://localhost:3003/posts/create -H "Content-Type: application/json" -H "authorization:$token" -d '{"photo":"https://i.picsum.photos/id/238/200/200.jpg?hmac=O4Jc6lqHVfaKVzLf8bWssNTbWzQoaRUC0TDXod9xDdM","description":"My city is beautiful =D","type":"normal"}'
@@ -196,7 +196,7 @@ BCRYPT_COST = 12
 
       {"message":"Success!"}%    
       ```
->> getPostById
+### getPostById
    * Request:
       ```bash
       curl -i GET http://localhost:3003/posts/$id -H "Content-Type: application/json" -H "authorization:$token" 
@@ -214,7 +214,7 @@ BCRYPT_COST = 12
 
       {"message":"Success!","post":{"id":"e4eb1531-d814-4742-b614-be2a36602548","photo":"https://i.picsum.photos/id/238/200/200.jpg?hmac=O4Jc6lqHVfaKVzLf8bWssNTbWzQoaRUC0TDXod9xDdM","description":"My city is beautiful =D","type":"normal","createdAt":"2020-11-17T17:47:15.000Z","authorId":"898bc45e-11f1-4a23-896a-7f2e29cfe012"}}% 
       ```
->> addFriend
+### addFriend
    * Request:
       ```bash
       curl -i PUT http://localhost:3003/users/friendship/$id -H "Content-Type: application/json" -H "authorization:$token" 
@@ -232,7 +232,7 @@ BCRYPT_COST = 12
 
       {"message": "Friend added successfuly"} 
       ```    
->> removeFriend
+### removeFriend
    * Request:
       ```bash
       curl -i DELETE http://localhost:3003/users/friendship/$id -H "Content-Type: application/json" -H "authorization:$token" 
@@ -251,7 +251,7 @@ BCRYPT_COST = 12
       {"message": "Friend removed successfuly"} 
       ```      
 
->> getPosts
+### getPosts
    * Request:
       ```bash
       curl -i GET http://localhost:3003/posts/feed -H "Content-Type: application/json" -H "authorization:$token" 
