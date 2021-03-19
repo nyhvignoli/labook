@@ -141,7 +141,16 @@ BCRYPT_COST = 12
 
 <a id="endpoints"></a>
 ## Endpoints
+<a name="endpoints-menu"></a>
+- [Signup](#signup)
+- [Login](#login)
+- [Create Post](#create-post)
+- [Get Post By Id](#get-post-by-id)
+- [Add Friend](#add-friend)
+- [Remove Friend](#remove-friend)
+- [Get Posts](#get-posts)
 
+<a id="signup"></a>
 ### signup
    * Request:
       ```bash
@@ -160,6 +169,7 @@ BCRYPT_COST = 12
 
       {"message":"Success!", "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg5OGJjNDVlLTExZjEtNGEyMy04OTZhLTdmMmUyOWNmZTAxMiIsImlhdCI6MTYwNTYyMzU5NSwiZXhwIjoxNjA1NzA5OTk1fQ.pWxV2vtLnp0hKm0CXXnLpnDu6PEPkZM27A71oTTCYfE"}%   
       ```
+<a id="login"></a>
 ### login
    * Request:
       ```bash
@@ -178,6 +188,7 @@ BCRYPT_COST = 12
 
       {"message":"Success!","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg5OGJjNDVlLTExZjEtNGEyMy04OTZhLTdmMmUyOWNmZTAxMiIsImlhdCI6MTYwNTYyMzk2MywiZXhwIjoxNjA1NzEwMzYzfQ.9JvXRQpazI5k6GAnc1lFcVcTbZ_ElASnwyybU_tRU48"}%   
       ```
+<a id="create-post"></a>      
 ### createPost
    * Request:
       ```bash
@@ -196,6 +207,7 @@ BCRYPT_COST = 12
 
       {"message":"Success!"}%    
       ```
+<a id="get-post-by-id"></a>      
 ### getPostById
    * Request:
       ```bash
@@ -214,6 +226,7 @@ BCRYPT_COST = 12
 
       {"message":"Success!","post":{"id":"e4eb1531-d814-4742-b614-be2a36602548","photo":"https://i.picsum.photos/id/238/200/200.jpg?hmac=O4Jc6lqHVfaKVzLf8bWssNTbWzQoaRUC0TDXod9xDdM","description":"My city is beautiful =D","type":"normal","createdAt":"2020-11-17T17:47:15.000Z","authorId":"898bc45e-11f1-4a23-896a-7f2e29cfe012"}}% 
       ```
+<a id="add-friend"></a>      
 ### addFriend
    * Request:
       ```bash
@@ -232,6 +245,7 @@ BCRYPT_COST = 12
 
       {"message": "Friend added successfuly"} 
       ```    
+<a id="remove-friend"></a>      
 ### removeFriend
    * Request:
       ```bash
@@ -251,6 +265,7 @@ BCRYPT_COST = 12
       {"message": "Friend removed successfuly"} 
       ```      
 
+<a id="get-posts"></a>
 ### getPosts
    * Request:
       ```bash
